@@ -1,18 +1,16 @@
 import React from 'react';
-import learn from '../../Assets/Photo/learn.jpg'
-import video from '../../Assets/Photo/video_call.jpg'
-import appoinment from '../../Assets/Photo/apoinment.jpg'
-import make_money from '../../Assets/Photo/make_money.jpg'
-import vlog from '../../Assets/Photo/vlog.jpg'
-import teach from '../../Assets/Photo/teach.jpg'
+import learn from '../../Assets/Photo/learn.jpg';
+import video from '../../Assets/Photo/video_call.jpg';
+import appoinment from '../../Assets/Photo/apoinment.jpg';
+import make_money from '../../Assets/Photo/make_money.jpg';
+import vlog from '../../Assets/Photo/vlog.jpg';
+import teach from '../../Assets/Photo/teach.jpg';
+
 const Card = ({ imgSrc, title, description }) => (
   <div className=''>
     <div className="card bg-base-100 w-80 shadow-xl">
       <figure>
-        <img
-          src={imgSrc}
-          alt={title}
-        />
+        <img src={imgSrc} alt={title} />
       </figure>
       <div className="card-body">
         <h2 className="card-title">
@@ -29,14 +27,13 @@ const Card = ({ imgSrc, title, description }) => (
   </div>
 );
 
-const Service = () => {
+const Learn_main = () => {
   const cardData = [
     {
       imgSrc: learn,
       title: "Lean Skills",
       description: "Explore and acquire new skills with our comprehensive learning resources.",
     },
-    // Repeat the card data as needed
     {
       imgSrc: video,
       title: "Video Conferences",
@@ -65,24 +62,31 @@ const Service = () => {
   ];
 
   return (
-    <div className='flex justify-center mt-20'>
-      <div className=''>
-        <h3 className='text-5xl font-bold flex justify-center mb-6'>Our Services</h3>
-        <div className='all_cards grid grid-cols-1 sm:grid-cols-3 gap-10'>
-          {cardData.map((card, index) => (
-            <Card
-              key={index}
-              imgSrc={card.imgSrc}
-              title={card.title}
-              description={card.description}
-            />
-          ))}
-          <div></div> {/* Empty divs for spacing or alignment, if needed */}
-          <div></div>
-        </div>
+    <div className='relative mt-20 px-10'>
+      <div className='absolute top-0 right-0 mt-4'>
+        <input
+          type="text"
+          placeholder="Type here"
+          className='input input-bordered input-error max-w-xs'
+        />
+      </div>
+      <div className='text-center'>
+        <h3 className='text-5xl font-bold mb-6'>Our Services</h3>
+      </div>
+      <div className='all_cards grid grid-cols-1 sm:grid-cols-3 gap-10'>
+        {cardData.map((card, index) => (
+          <Card
+            key={index}
+            imgSrc={card.imgSrc}
+            title={card.title}
+            description={card.description}
+          />
+        ))}
+        <div></div> 
+        <div></div>
       </div>
     </div>
   );
 };
 
-export default Service;
+export default Learn_main;
