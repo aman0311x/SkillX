@@ -7,8 +7,8 @@ import vlog from '../../Assets/Photo/vlog.jpg';
 import teach from '../../Assets/Photo/teach.jpg';
 
 const Card = ({ imgSrc, title, description }) => (
-  <div className=''>
-    <div className="card bg-base-100 w-80 shadow-xl">
+  <div className='flex justify-center'>
+    <div className="card bg-base-100 w-80 shadow-xl mb-6">
       <figure>
         <img src={imgSrc} alt={title} />
       </figure>
@@ -55,25 +55,22 @@ const Learn_main = () => {
       description: "Create and share engaging vlogs to connect with your audience and showcase your experiences.",
     },
     {
-        imgSrc: make_money,
-        title: "Monetize Your Skills!",
-        description: "Earn money by monetizing your skills and expertise through our platform.",
-      },
+      imgSrc: make_money,
+      title: "Monetize Your Skills!",
+      description: "Earn money by monetizing your skills and expertise through our platform.",
+    },
   ];
 
   return (
-    <div className='relative mt-20 px-10'>
-      <div className='absolute top-0 right-0 mt-4'>
-        <input
-          type="text"
-          placeholder="Type here"
-          className='input input-bordered input-error max-w-xs'
-        />
-      </div>
+    <div className='mt-20'>
+
       <div className='text-center'>
         <h3 className='text-5xl font-bold mb-6'>Our Services</h3>
+        <div className='flex justify-end mr-8 input-primary'>
+          <input type="text" placeholder="Type here" className="input input-bordered input-primary w-full max-w-xs mb-8 " />
+        </div>
       </div>
-      <div className='all_cards grid grid-cols-1 sm:grid-cols-3 gap-10'>
+      <div className='all_cards grid grid-cols-1 sm:grid-cols-3 gap-2 px-6'>
         {cardData.map((card, index) => (
           <Card
             key={index}
@@ -82,7 +79,7 @@ const Learn_main = () => {
             description={card.description}
           />
         ))}
-        <div></div> 
+        <div></div>
         <div></div>
       </div>
     </div>
