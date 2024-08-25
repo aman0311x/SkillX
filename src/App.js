@@ -8,6 +8,7 @@ import { Routes, Route } from "react-router-dom"
 import Footer from './Pages/Shared/Footer';
 import SignIn from './Pages/Login/SignIn';
 import SignUp from './Pages/Login/SignUp';
+import Create_post from '../src/Pages/Learn/Create_post'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/learn" element={<LearnMain />} />
         <Route path="/login" element={<SignIn></SignIn>} />
         <Route path="/signup" element={<SignUp></SignUp>} />
+        <Route path="/post" element={<create_post></create_post>} />
       </Routes>
       <Footer></Footer>
     </div>

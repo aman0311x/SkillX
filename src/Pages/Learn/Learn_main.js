@@ -65,10 +65,12 @@ const Learn_main = () => {
     <div className='mt-20'>
 
       <div className='text-center'>
-        <h3 className='text-5xl font-bold mb-6'>Our Services</h3>
+        
         <div className='flex justify-end mr-8 input-primary'>
-          <input type="text" placeholder="Type here" className="input input-bordered input-primary w-full max-w-xs mb-8 " />
+          <input type="text" placeholder="Type here" className="input input-bordered input-primary w-full max-w-xs mb-8 mx-5" />
+          <button className="btn btn-active btn-primary mb-6">Create Post</button>
         </div>
+        <h3 className='text-5xl font-bold mb-6'>Our Services</h3>
       </div>
       <div className='all_cards grid grid-cols-1 sm:grid-cols-3 gap-2 px-6'>
         {cardData.map((card, index) => (
