@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react'; // Add useState import
 import learn from '../../Assets/Photo/learn.jpg';
 import video from '../../Assets/Photo/video_call.jpg';
 import appoinment from '../../Assets/Photo/apoinment.jpg';
 import make_money from '../../Assets/Photo/make_money.jpg';
 import vlog from '../../Assets/Photo/vlog.jpg';
 import teach from '../../Assets/Photo/teach.jpg';
+import Create_post from './Create_post';
+
+const CreateNewPost = () => {
+  return (
+    <div>
+      <Create_post></Create_post>
+    </div>
+  );
+};
 
 const Card = ({ imgSrc, title, description }) => (
   <div className='flex justify-center'>
@@ -28,6 +37,8 @@ const Card = ({ imgSrc, title, description }) => (
 );
 
 const Learn_main = () => {
+
+
   const cardData = [
     {
       imgSrc: learn,
@@ -63,12 +74,11 @@ const Learn_main = () => {
 
   return (
     <div className='mt-20'>
-
       <div className='text-center'>
-        
         <div className='flex justify-end mr-8 input-primary'>
           <input type="text" placeholder="Type here" className="input input-bordered input-primary w-full max-w-xs mb-8 mx-5" />
-          <button className="btn btn-active btn-primary mb-6">Create Post</button>
+
+          {<CreateNewPost />}
         </div>
         <h3 className='text-5xl font-bold mb-6'>Our Services</h3>
       </div>

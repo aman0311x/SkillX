@@ -8,7 +8,7 @@ const Navbar = () => {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About</Link></li>
         <li><Link to="/contact">Contact Us</Link></li>
-        <li><Link to="/login">Login</Link></li>
+        <li><Link to="/blogs">Blogs</Link></li>
 
     </>
     return (
@@ -43,7 +43,8 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Sign In</a>
+                <Link to='/login' className='btn'>Sign In</Link>
+                <Link to='/signup' className='btn ml-4'>Sign Up</Link>
             </div>
         </div>
     );
