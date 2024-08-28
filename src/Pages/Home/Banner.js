@@ -10,6 +10,9 @@ const Banner = () => {
     const handleLearnClick = () => {
         navigate('/learn');
     };
+    const handleTeachClick = () => {
+        navigate('/teach');
+    };
 
     const bannerDesign = <>
         <div>
@@ -21,7 +24,7 @@ const Banner = () => {
                     <p className="mb-5 text-lg">
                         A platform where community members can share and discover skills, offering opportunities for learning and collaboration in a supportive environment.
                     </p>
-                    <button className="btn btn-primary mx-5">I want to Teach</button>
+                    <button className="btn btn-primary mx-5" onClick={handleTeachClick}>I want to Teach</button>
                     <button className="btn btn-primary" onClick={handleLearnClick}>I want to Learn</button>
                 </div>
             </div>

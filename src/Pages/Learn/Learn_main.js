@@ -15,26 +15,34 @@ const CreateNewPost = () => {
   );
 };
 
-const Card = ({ imgSrc, title, description }) => (
+const Card = ({ imgSrc, title, studentCount, duration, teacher }) => (
   <div className='flex justify-center'>
     <div className="card bg-base-100 w-80 shadow-xl mb-6">
       <figure>
         <img src={imgSrc} alt={title} />
       </figure>
       <div className="card-body">
+        <div className="stats flex items-center justify-between">
+          <span className="student-count">{studentCount} students</span>
+          <div className="duration">
+            <span>{duration}</span>
+          </div>
+        </div>
         <h2 className="card-title">
           {title}
-          <div className="badge badge-secondary">NEW</div>
         </h2>
-        <p>{description}</p>
-        <div className="card-actions justify-end">
-          <div className="badge badge-outline">Fashion</div>
-          <div className="badge badge-outline">Products</div>
+        <div className="teacher-placeholder">
+          <div className="user-information small">
+            <a href="#" className="link-main no-bold title-link initialized">
+              {teacher}
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 );
+
 
 const Learn_main = () => {
 
@@ -43,7 +51,9 @@ const Learn_main = () => {
     {
       imgSrc: learn,
       title: "Lean Skills",
-      description: "Explore and acquire new skills with our comprehensive learning resources.",
+      studentCount: 1323,
+      duration:30,
+      teacher: "Sazidul Islam",
     },
     {
       imgSrc: video,
@@ -88,7 +98,9 @@ const Learn_main = () => {
             key={index}
             imgSrc={card.imgSrc}
             title={card.title}
-            description={card.description}
+            studentCount={card.studentCount}
+            duration={card.duration}
+            teacher={card.teacher}
           />
         ))}
         <div></div>

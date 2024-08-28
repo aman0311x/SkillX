@@ -11,6 +11,7 @@ import SignUp from './Pages/Login/SignUp';
 import Blogs from './Pages/Blogs/Blogs';
 import PageNotFound from './Pages/Shared/PageNotFound';
 import ContactUs from './Pages/Contact/ContactUs';
+import Teach from './Pages/Teach/Teaching';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/signup" element={<SignUp></SignUp>} />
         <Route path="/blogs" element={<Blogs></Blogs>} />
         <Route path="/contact" element={<ContactUs></ContactUs>} />
+        <Route path="/teach" element={<Teach></Teach>} />
         <Route path='*' element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
       <Footer></Footer>
