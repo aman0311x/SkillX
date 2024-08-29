@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "tittle": "Learn Skills",
+        "studentCount": 1323,
+        "duration": 30,
+        "teacher": "Amanur Rahman",
+        "imgUrl": "https://i.postimg.cc/gkLjh3zf/learn.jpg"
+    },
+    {
+        "id": 2,
+        "tittle": "Video Conferences",
+        "studentCount": 800,
+        "duration": 130,
+        "teacher": "Nakib",
+        "imgUrl": "https://i.postimg.cc/gkLjh3zf/learn.jpg"
+    },
+    {
+        "id": 3,
+        "tittle": "Book Appointments",
+        "studentCount": 200,
+        "duration": 33,
+        "teacher": "Samiha Rahman",
+        "imgUrl": "https://i.postimg.cc/gkLjh3zf/learn.jpg"
+    }
+]

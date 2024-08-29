@@ -1,11 +1,18 @@
-import React, { useState } from 'react'; // Add useState import
-import learn from '../../Assets/Photo/learn.jpg';
-import video from '../../Assets/Photo/video_call.jpg';
-import appoinment from '../../Assets/Photo/apoinment.jpg';
-import make_money from '../../Assets/Photo/make_money.jpg';
-import vlog from '../../Assets/Photo/vlog.jpg';
-import teach from '../../Assets/Photo/teach.jpg';
+import React, { useEffect } from 'react';
 import Create_post from './Create_post';
+import UseServices from '../../Hooks/UseServices';
+
+// Calling database to load the services
+// const Services = () => {
+//   const [services] = UseServices();
+
+//   useEffect(() => {
+//     // Log services to the console to check data
+//     //console.log(services);
+//   }, [services]);
+
+//   return null; // Since we're not rendering anything from this component directly
+// };
 
 const CreateNewPost = () => {
   return (
@@ -25,7 +32,7 @@ const Card = ({ imgSrc, title, studentCount, duration, teacher }) => (
         <div className="stats flex items-center justify-between">
           <span className="student-count">{studentCount} students</span>
           <div className="duration">
-            <span>{duration}</span>
+            <span>{duration} min</span>
           </div>
         </div>
         <h2 className="card-title">
@@ -43,44 +50,9 @@ const Card = ({ imgSrc, title, studentCount, duration, teacher }) => (
   </div>
 );
 
-
 const Learn_main = () => {
-
-
-  const cardData = [
-    {
-      imgSrc: learn,
-      title: "Lean Skills",
-      studentCount: 1323,
-      duration:30,
-      teacher: "Sazidul Islam",
-    },
-    {
-      imgSrc: video,
-      title: "Video Conferences",
-      description: "Connect with experts seamlessly through high-quality video conferences.",
-    },
-    {
-      imgSrc: appoinment,
-      title: "Book Appointments",
-      description: "Schedule and manage your appointments effortlessly with our intuitive system.",
-    },
-    {
-      imgSrc: teach,
-      title: "Empower Others",
-      description: "Share your knowledge and expertise by teaching others through our platform.",
-    },
-    {
-      imgSrc: vlog,
-      title: "Share Vlog",
-      description: "Create and share engaging vlogs to connect with your audience and showcase your experiences.",
-    },
-    {
-      imgSrc: make_money,
-      title: "Monetize Your Skills!",
-      description: "Earn money by monetizing your skills and expertise through our platform.",
-    },
-  ];
+  // Fetch services data using custom hook
+  const [servicesData] = UseServices();
 
   return (
     <div className='mt-20'>
@@ -93,18 +65,18 @@ const Learn_main = () => {
         <h3 className='text-5xl font-bold mb-6'>Our Services</h3>
       </div>
       <div className='all_cards grid grid-cols-1 sm:grid-cols-3 gap-2 px-6'>
-        {cardData.map((card, index) => (
+        {/* Render cards dynamically from services data */}
+        {servicesData.map((service) => (
           <Card
-            key={index}
-            imgSrc={card.imgSrc}
-            title={card.title}
-            studentCount={card.studentCount}
-            duration={card.duration}
-            teacher={card.teacher}
+            key={service.id}
+            imgSrc={service.imgUrl}
+            title={service.tittle}
+            studentCount={service.studentCount}
+            duration={service.duration}
+            teacher={service.teacher}
           />
         ))}
-        <div></div>
-        <div></div>
+        {/* Removed unused divs */}
       </div>
     </div>
   );
