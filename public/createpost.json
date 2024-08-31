@@ -1,0 +1,31 @@
+[
+    {
+        "id": 1,
+        "problem": "Tech",
+        "subproblem": "UI Design",
+        "description": "Solved",
+        "ans": ""
+        
+    },
+    {
+        "id": 2,
+        "problem": "Buisness",
+        "subproblem": "Sell",
+        "description": "teach me",
+        "ans": ""
+    },
+    {
+        "id": 3,
+        "problem": "Tech",
+        "subproblem": "Bug issue",
+        "description": "can't understand",
+        "ans": ""
+    },
+    {
+        "id": 4,
+        "problem": "Tech",
+        "subproblem": "Bug issue",
+        "description": "we can't understand",
+        "ans": ""
+    }
+]
